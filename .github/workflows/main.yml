@@ -204,4 +204,4 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: Деплой Kitty успешно выполнен! Кчау! 
+        message: Деплой Kitty успешно выполнен! Кчау!
