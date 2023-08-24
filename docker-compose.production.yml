@@ -13,18 +13,18 @@ services:
     volumes:
       - pg_data_production:/var/lib/postgresql/data
   backend:
-    image: olegsidorovx/kitty_backend
+    image: olegsidorovx/kittygram_backend
     env_file: .env
     volumes:
       - static_volume:/backend_static
   frontend:
-    image: olegsidorovx/kitty_frontend  # Качаем с Docker Hub
+    image: olegsidorovx/kittygram_frontend  # Качаем с Docker Hub
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
   gateway:
-    image: olegsidorovx/kitty_gateway  # Качаем с Docker Hub
+    image: olegsidorovx/kittygram_gateway  # Качаем с Docker Hub
     env_file: .env
     volumes:
       - static_volume:/staticfiles/
