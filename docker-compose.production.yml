@@ -31,7 +31,7 @@ services:
     image: olegsidorovx/kittygram_gateway  # Качаем с Docker Hub
     env_file: .env
     volumes:
-      - static_volume:/static/
+      - static_volume:/staticfiles/
       - media_production:/media
     ports:
       - 9000:80
