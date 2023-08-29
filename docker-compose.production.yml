@@ -24,9 +24,9 @@ services:
   frontend:
     image: olegsidorovx/kittygram_frontend  # Качаем с Docker Hub
     env_file: .env
-    command: cp -r /app/build/. /staticfiles/
+    command: cp -r /app/build/. /static/
     volumes:
-      - static_volume:/staticfiles
+      - static_volume:/static
   gateway:
     image: olegsidorovx/kittygram_gateway  # Качаем с Docker Hub
     env_file: .env
